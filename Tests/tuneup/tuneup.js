@@ -1,0 +1,5 @@
+#import "assertions.js"
+#import "uiautomation-ext.js"
+#import "lang-ext.js"
+#import "screen.js"
+#import "test.js"
