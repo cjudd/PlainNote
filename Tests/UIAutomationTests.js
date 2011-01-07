@@ -7,7 +7,7 @@ var window = app.mainWindow();
 function testAddingANote(testName) {
 	UIALogger.logStart(testName);
 	try {
-		UIATarget.localTarget().logElementTree();
+		//UIATarget.localTarget().logElementTree();
 
 		// without the delay the element was not on the screen and could not be tapped.
 		target.delay(1); 
