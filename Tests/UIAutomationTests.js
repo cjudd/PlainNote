@@ -10,12 +10,12 @@ function testAddingANote(testName) {
 		//UIATarget.localTarget().logElementTree();
 
 		// without the delay the element was not on the screen and could not be tapped.
-		target.delay(1); 
+		target.delay(2); 
 		app.navigationBar().buttons()["Add"].tap();
 
 		// without the delay the element was not on the screen and could not be tapped.
 		target.delay(1);
-		window.scrollViews()[0].textViews()[0].setValue("CodeMash is cool!!!");
+		window.scrollViews()[0].textViews()["note"].setValue("CodeMash is cool!!!");
 	
 		app.navigationBar().buttons()["Save"].tap();
 		
@@ -46,6 +46,7 @@ function testDisplayingHelp(testName) {
 
 		// without the delay the element was not on the screen and could not be tapped.		
 		target.delay(1);
+		target.captureScreenWithName("help_screen");
 		
 		// No good way to get to the URL or contents of a WebView
 		webView = window.scrollViews()[0].webViews()[0];
